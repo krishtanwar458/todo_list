@@ -51,6 +51,8 @@ while True:
           except ValueError:
                print('Your command is invalid!')
                continue
+          except IndexError:
+                print('You can only edit avaliable todos!')
 
      elif action.startswith('complete'):
           try:
