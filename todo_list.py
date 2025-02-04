@@ -1,15 +1,4 @@
-def get_todos(filepath = 'todos.txt'):
-     """ Read a text file and return the list of
-     to-do items. """
-     with open(filepath, 'r') as file_local:
-               todo_list_local = file_local.readlines()
-     return todo_list_local
-
-def write_todos(todo_list_local, filepath = 'todos.txt'):
-     """ Write the to-do items list in a text file. """
-     with open(filepath, 'w') as file:
-               file.writelines(todo_list_local)
-
+from functions import get_todos, write_todos
 
 while True:
      action = input('Would you like to add, show, complete, edit or exit your todo list? (Type add/new + (todo)/show/edit + (todo number)/complete + (todo number)/exit) ')
@@ -53,6 +42,7 @@ while True:
                continue
           except IndexError:
                 print('You can only edit avaliable todos!')
+                continue
 
      elif action.startswith('complete'):
           try:
@@ -69,6 +59,7 @@ while True:
                continue
           except ValueError:
                 print("You must enter a number after 'complete' command!")
+                continue
 
      elif action.startswith('exit'):
           print('Bye!')
