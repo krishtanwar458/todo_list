@@ -1,5 +1,8 @@
 from functions import get_todos, write_todos
+from time import strftime
 
+
+print(strftime('%b %d, %Y | %H:%M:%S'))
 while True:
      action = input('Would you like to add, show, complete, edit or exit your todo list? (Type add/new + (todo)/show/edit + (todo number)/complete + (todo number)/exit) ')
      action = action.strip()
