@@ -1,6 +1,6 @@
 from functions import get_todos, write_todos
 from time import strftime
-
+print('Welcome to the Todo List Application')
 
 print(strftime('%b %d, %Y | %H:%M:%S'))
 while True:
