@@ -1,0 +1,12 @@
+[
+    {
+        "Question": "What type of animal is a dolphin?",
+        "Options": ["Amphibian", "Fish", "Mammals", "Birds"],
+        "Correct_Answer": 3
+    },
+    {
+        "Question": "What occupies most of the Earth's surface?",
+        "Options": ["Land", "Water"],
+        "Correct_Answer": 2
+    }
+]
