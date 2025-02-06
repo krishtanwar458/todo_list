@@ -39,4 +39,15 @@ truth = []
 def greeting(name):
     return print(f'Hi {name}')
 
-greeting(name = 'Andy')
+#greeting(name = 'Andy')
+
+def longestCommonPrefix(strs):
+    #small_lists = [[word] for word in strs]
+    #print(small_lists)
+    for i in strs:
+        k = (len(i))
+        for index, j in enumerate(i):
+            print(index+1, j)
+
+
+#longestCommonPrefix(['flower', 'flow'])
