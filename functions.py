@@ -9,6 +9,3 @@ def write_todos(todo_list_local, filepath = 'todos.txt'):
      """ Write the to-do items list in a text file. """
      with open(filepath, 'w') as file:
                file.writelines(todo_list_local)
-
-import os
-print(os.getcwd())
