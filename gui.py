@@ -24,14 +24,17 @@ while True:
             functions.write_todos(todos)
             window['todos'].update(values=todos)
         case 'Edit':
-            todo_to_edit = values['todos'][0]
-            new_todo = values['todo']
+            try:
+                todo_to_edit = values['todos'][0]
+                new_todo = values['todo']
 
-            todos = functions.get_todos()
-            index = todos.index(todo_to_edit)
-            todos[index] = new_todo.capitalize() + '\n'
-            functions.write_todos(todos)
-            window['todos'].update(values=todos)
+                todos = functions.get_todos()
+                index = todos.index(todo_to_edit)
+                todos[index] = new_todo.capitalize() + '\n'
+                functions.write_todos(todos)
+                window['todos'].update(values=todos)
+            except IndexError:
+                continue
         case 'todos':
             window['todo'].update(value=values['todos'][0])
         case sg.WIN_CLOSED:
