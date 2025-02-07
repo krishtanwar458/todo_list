@@ -1,5 +1,5 @@
 import json 
-with open('app/questions.json', 'r') as file:
+with open('questions.json', 'r') as file:
     content = file.read()
 
 
