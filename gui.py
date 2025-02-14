@@ -48,7 +48,7 @@ while True:
                 window['todos'].update(values=todos)
                 window['todo'].update(value='')
             except IndexError:
-                window['label'].update("You must select a todo then make an edit in the input box and then click the 'Edit' button")
+                sg.popup("You must select a todo then make an edit in the input box and then click the 'Edit' button")
                 continue
         case 'todos':
             window['todo'].update(value=values['todos'][0])
