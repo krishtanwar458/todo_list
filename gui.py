@@ -26,6 +26,8 @@ window = sg.Window('Todo App',
 
 while True:
     event, values = window.read(timeout=10)
+    if event == sg.WIN_CLOSED:
+        break
     window['clock'].update(value=time.strftime('%b %d, %Y | %H:%M:%S'))
     print(event)
     print(values)
@@ -63,8 +65,6 @@ while True:
             except IndexError:
                 window['label'].update("You must select a todo to complete")
         case 'Exit':
-            break
-        case sg.WIN_CLOSED:
             break
 
 window.close()
